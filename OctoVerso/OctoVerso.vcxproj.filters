@@ -18,7 +18,7 @@
     <ClInclude Include="File.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
-    <ClInclude Include="Item.h">
+    <ClInclude Include="Chevalet.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
     <ClInclude Include="Joueur.h">

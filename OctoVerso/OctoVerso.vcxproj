@@ -128,7 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="File.h" />
-    <ClInclude Include="Item.h" />
+    <ClInclude Include="Chevalet.h" />
     <ClInclude Include="Joueur.h" />
     <ClInclude Include="Paquet.h" />
     <ClInclude Include="Rail.h" />
