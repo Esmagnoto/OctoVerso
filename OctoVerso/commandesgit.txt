@@ -1,0 +1,138 @@
+Voici une liste des commandes Git courantes, organisées par catégorie :
+
+---
+
+### **Configuration de base**
+- `git config --global user.name "Votre Nom"`  
+  Configure votre nom d'utilisateur global pour Git.
+
+- `git config --global user.email "votre.email@example.com"`  
+  Configure votre adresse e-mail globale.
+
+- `git config --list`  
+  Affiche les paramètres de configuration.
+
+---
+
+### **Initialisation et configuration d'un dépôt**
+- `git init`  
+  Initialise un nouveau dépôt Git.
+
+- `git clone <URL>`  
+  Clone un dépôt distant sur votre machine.
+
+---
+
+### **Gestion des fichiers**
+- `git add <fichier>`  
+  Ajoute un fichier spécifique à l'index (staging area).
+
+- `git add .`  
+  Ajoute tous les fichiers modifiés et nouveaux au suivi.
+
+- `git rm <fichier>`  
+  Supprime un fichier et l'ajoute à l'index pour suppression.
+
+---
+
+### **Validation des modifications**
+- `git commit -m "Message"`  
+  Valide les modifications avec un message.
+
+- `git commit --amend`  
+  Modifie le dernier commit.
+
+---
+
+### **Visualisation de l'état et de l'historique**
+- `git status`  
+  Affiche l'état du dépôt (fichiers modifiés, en attente, etc.).
+
+- `git log`  
+  Affiche l'historique des commits.
+
+- `git log --oneline`  
+  Affiche un historique résumé des commits.
+
+---
+
+### **Gestion des branches**
+- `git branch`  
+  Liste les branches locales.
+
+- `git branch <nom-branche>`  
+  Crée une nouvelle branche.
+
+- `git checkout <nom-branche>`  
+  Change de branche.
+
+- `git checkout -b <nom-branche>`  
+  Crée et bascule sur une nouvelle branche.
+
+- `git merge <nom-branche>`  
+  Fusionne une branche dans la branche active.
+
+- `git branch -d <nom-branche>`  
+  Supprime une branche localement.
+
+---
+
+### **Dépôts distants**
+- `git remote -v`  
+  Liste les dépôts distants.
+
+- `git remote add origin <URL>`  
+  Ajoute un dépôt distant nommé "origin".
+
+- `git push -u origin <branche>`  
+  Pousse une branche locale vers le dépôt distant et configure la branche pour suivre.
+
+- `git pull origin <branche>`  
+  Récupère et fusionne les modifications depuis le dépôt distant.
+
+---
+
+### **Réinitialisation et restauration**
+- `git reset <fichier>`  
+  Retire un fichier de l'index (staging area).
+
+- `git reset --soft HEAD~1`  
+  Réinitialise le dernier commit tout en gardant les modifications dans l'index.
+
+- `git reset --hard HEAD~1`  
+  Réinitialise le dernier commit et supprime les modifications.
+
+- `git checkout -- <fichier>`  
+  Restaure un fichier à son état précédent.
+
+---
+
+### **Stash (mettre de côté les modifications)**
+- `git stash`  
+  Enregistre les modifications locales sans les valider.
+
+- `git stash apply`  
+  Applique les modifications enregistrées.
+
+- `git stash pop`  
+  Applique et supprime les modifications enregistrées.
+
+- `git stash list`  
+  Liste les modifications enregistrées.
+
+---
+
+### **Dépannage**
+- `git diff`  
+  Affiche les différences entre les fichiers suivis et modifiés.
+
+- `git diff <commit1> <commit2>`  
+  Compare deux commits.
+
+- `git log --graph`  
+  Affiche l'historique des branches sous forme de graphe.
+
+---
+
+Si vous avez besoin d'aide pour une commande spécifique, vous pouvez utiliser :  
+`git help <commande>` ou `git <commande> --help`.

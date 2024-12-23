@@ -4,3 +4,7 @@
 
 */
 #pragma once
+
+typedef struct {
+	char chevalet;
+}Chevalet;

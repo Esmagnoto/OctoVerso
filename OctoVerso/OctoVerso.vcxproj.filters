@@ -31,4 +31,7 @@
       <Filter>Fichiers sources</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="commandesgit.txt" />
+  </ItemGroup>
 </Project>
