@@ -140,6 +140,9 @@
   <ItemGroup>
     <ClCompile Include="liste.c" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="sujet-s1.02.pdf" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

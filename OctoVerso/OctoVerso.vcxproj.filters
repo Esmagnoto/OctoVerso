@@ -35,11 +35,18 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="commandesgit.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="liste.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sujet-s1.02.pdf">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="commandesgit.txt">
+      <Filter>Fichiers de ressources</Filter>
+    </Text>
   </ItemGroup>
 </Project>
