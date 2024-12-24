@@ -130,11 +130,15 @@
     <ClInclude Include="File.h" />
     <ClInclude Include="Chevalet.h" />
     <ClInclude Include="Joueur.h" />
+    <ClInclude Include="liste.h" />
     <ClInclude Include="Paquet.h" />
     <ClInclude Include="Rail.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="commandesgit.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="liste.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

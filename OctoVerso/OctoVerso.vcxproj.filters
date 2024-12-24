@@ -30,8 +30,16 @@
     <ClInclude Include="Rail.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
+    <ClInclude Include="liste.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="commandesgit.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="liste.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
