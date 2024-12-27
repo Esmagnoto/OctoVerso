@@ -1,8 +1,9 @@
 /* 
-ici c'est le rail où le jeut vais utiliser pour retenir les cartes jouées 
+ici c'est le rail oï¿½ le jeut vais utiliser pour retenir les cartes jouï¿½es 
 
 */
 #pragma once
+#include "liste.h"
 
 typedef struct {
 	ItemL* chevalets;
