@@ -1,20 +1,22 @@
-/* 
-je vais definir ici un paquet que contient des cartes Chevalet.h
- */
+
 #pragma once
-#include "liste.h"
-#include "Joueur.h"
-#include "Rail.h"
+
+#include "vecteur.h"
+#define NBCHEVALETS 88
 
 typedef struct {
-	ItemL* chevalets; // tableau dinamique des chevalets
-	int nbChevalets;
-}Paquet;
+	Vecteur* chevalets;
+} Paquet;
+
 
 void initPaquet(Paquet* p);
 
-void melangerChevalets(Paquet* p);
+void remplir(Paquet* p);
 
-void distributionChevalets(Paquet* p, Joueur* j1, Joueur* j2, Rail* r);
+void melanger(Paquet* p);
 
-void afficherPaquet(const Paquet* p);
+Item piocher(Paquet* p);
+
+void afficher(const Paquet* p);
+
+void detruirePaquet(Paquet* p);

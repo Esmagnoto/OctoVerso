@@ -1,12 +1,12 @@
 #pragma once
 
-#include "chevalet.h"
+#include "item.h"
 
 /**
  * @brief Maillon d'une liste chaînée.
  */
 struct _Maillon_ {
-    ItemL element;              ///< Valeur de l'élément.
+    Item element;              ///< Valeur de l'élément.
     struct _Maillon_* suivant; ///< Adresse du maillon suivant (ou NULL).
 };
 
@@ -19,7 +19,7 @@ typedef struct _Maillon_ Maillon;
 typedef struct {
     Maillon* premier; ///< Adresse du premier maillon.
     Maillon* dernier; // question 5
-    int taille; ///< Nombre d'éléments contenus dans la liste. // QUESTION 4.
+    int taillel; ///< Nombre d'éléments contenus dans la liste. // QUESTION 4.
 } Liste;
 
 /**
@@ -41,7 +41,7 @@ int estVide(const Liste* li);
  * @param[in] it élément devant être ajouté.
  * @return 1 en cas de succès et 0 en cas de mémoire insuffisante. Dans ce dernier cas, la liste est inchangée.
  */
-int inclure(Liste* li, ItemL it);
+int inclure(Liste* li, Item it);
 
 /**
  * @brief Retourne le premier élément d'une liste.
@@ -49,7 +49,7 @@ int inclure(Liste* li, ItemL it);
  * @return Le premier élément de la liste.
  * @pre La liste ne doit pas être vide.
  */
-ItemL premier(const Liste* li);
+Item premier(const Liste* li);
 
 /**
  * @brief Supprime le premier élément d'une liste.
@@ -90,7 +90,7 @@ int fini(const ConstIt* iter);
  * @return L'élément de la liste actuellement désigné par l'itérateur.
  * @pre Le parcours ne doit pas être fini (@ref fini).
  */
-ItemL courant(const ConstIt* iter);
+Item courant(const ConstIt* iter);
 
 /**
  * @brief Passe à l'élément suivant dans le parcours.
@@ -128,7 +128,7 @@ int finiIt(const Iterateur* iter);
  * @return L'élément de la liste actuellement désigné par l'itérateur.
  * @pre Le parcours ne doit pas être fini (@ref finiIt).
  */
-ItemL courantIt(const Iterateur* iter);
+Item courantIt(const Iterateur* iter);
 
 /**
  * @brief Passe à l'élément suivant dans le parcours.
@@ -143,7 +143,7 @@ void suivantIt(Iterateur* iter);
  * @param it Nouvelle valeur de l'élément courant.
  * @pre Le parcours ne doit pas être fini (@ref finiIt).
  */
-void changer(const Iterateur* iter, ItemL it);
+void changer(const Iterateur* iter, Item it);
 
 /**
  * @brief InsËre un nouvel élément avant l'élément courant du parcours et, en fin de liste, si le parcours est fini (@ref finiIt). Le nouvel élément courant est celui ayant été inséré.
@@ -151,7 +151,7 @@ void changer(const Iterateur* iter, ItemL it);
  * @param[in] it La valeur du nouvel élément.
  * @return 1 en cas de succès et 0 en cas de mémoire insuffisante. Dans ce dernier cas, la liste est inchangée.
  */
-int inserer(Iterateur* iter, ItemL it);
+int inserer(Iterateur* iter, Item it);
 
 /**
  * @brief Supprime l'élément courant du parcours et positionne l'itérateur
@@ -160,13 +160,13 @@ int inserer(Iterateur* iter, ItemL it);
  * @return L'élément ayant été supprimé de la liste.
  * @pre Le parcours ne doit pas être fini (@ref finiIt).
  */
-ItemL effacer(Iterateur* iter);
+Item effacer(Iterateur* iter);
 
 
 //QUESTION 4
-int taille(const Liste* li);
+int taillel(const Liste* li);
 
 
 
 // QUESTION 5
-int inclureFin(Liste* li, ItemL it);
+int inclureFin(Liste* li, Item it);

@@ -7,14 +7,14 @@
 
 void initListe(Liste* li) {
     li->premier = li->dernier = NULL; // <-- modification Question 5
-    li -> taille = 0; // <-- ajout Question 4
+    li -> taillel = 0; // <-- ajout Question 4
 }
 
 int estVide(const Liste* li) {
     return li->premier == NULL;
 }
 
-int inclure(Liste* li, ItemL it) {
+int inclure(Liste* li, Item it) {
     Maillon* m = (Maillon*)malloc(sizeof(Maillon));
     if (m == NULL)
         return 0;
@@ -24,11 +24,11 @@ int inclure(Liste* li, ItemL it) {
     if (li->dernier == NULL) // <-- ajout Question 5
         li->dernier = m;
     
-    ++li->taille; // <-- ajout Question 4
+    ++li->taillel; // <-- ajout Question 4
     return 1;
 }
 
-ItemL premier(const Liste* li) {
+Item premier(const Liste* li) {
     assert(!estVide(li));
     return li->premier->element;
 }
@@ -40,7 +40,7 @@ void tronquer(Liste* li) {
     if (li->premier == NULL) // <-- ajout Question 5
         li->dernier = NULL;
     free(m);
-    --li->taille; // <-- ajout Question 4
+    --li->taillel; // <-- ajout Question 4
 }
 
 void detruireListe(Liste* li) {
@@ -56,7 +56,7 @@ int fini(const ConstIt* iter) {
     return *iter == NULL;
 }
 
-ItemL courant(const ConstIt* iter) {
+Item courant(const ConstIt* iter) {
     assert(!fini(iter));
     return (*iter)->element;
 }
@@ -76,7 +76,7 @@ int finiIt(const Iterateur* iter) {
     return iter->courant == NULL;
 }
 
-ItemL courantIt(const Iterateur* iter) {
+Item courantIt(const Iterateur* iter) {
     assert(!finiIt(iter));
     return iter->courant->element;
 }
@@ -87,12 +87,12 @@ void suivantIt(Iterateur* iter) {
     iter->courant = iter->courant->suivant;
 }
 
-void changer(const Iterateur* iter, ItemL it) {
+void changer(const Iterateur* iter, Item it) {
     assert(!finiIt(iter));
     iter->courant->element = it;
 }
 
-int inserer(Iterateur* iter, ItemL it) {
+int inserer(Iterateur* iter, Item it) {
     Maillon* m = (Maillon*)malloc(sizeof(Maillon));
     if (m == NULL)
         return 0;
@@ -105,11 +105,11 @@ int inserer(Iterateur* iter, ItemL it) {
     if(iter->pred == NULL) // <-- ajout Question 5
         iter->liste->dernier = m;
     iter->courant = m;
-    ++iter->liste->taille; // <-- ajout Question 4
+    ++iter->liste->taillel; // <-- ajout Question 4
     return 1;
 }
 
-ItemL effacer(Iterateur* iter) {
+Item effacer(Iterateur* iter) {
     assert(!finiIt(iter));
     Maillon* m = iter->courant;
     if (iter->pred == NULL)
@@ -119,9 +119,9 @@ ItemL effacer(Iterateur* iter) {
     if (m->suivant == NULL) // <-- ajout Question 5
         iter->liste->dernier = iter->pred;
     iter->courant = m->suivant;
-    ItemL it = m->element;
+    Item it = m->element;
     free(m);
-    --iter->liste->taille; // <-- ajout Question 4
+    --iter->liste->taillel; // <-- ajout Question 4
     return it;
 }
 
@@ -146,31 +146,31 @@ void affiche(const Liste* liste) {
 
 
 
-// QUESTION 2
-Liste crible(int n) {
-    
-    Liste premiers;
-    initListe(&premiers);
-    
-    for(int i = n; i > 1; --i)
-        inclure(&premiers, i);
-    
-    Iterateur it;
-    initIterateur(&premiers, &it);
-    while(!finiIt(&it)) {
-        int p = courantIt(&it);
-        Iterateur tmp = it;
-        suivantIt(&tmp);
-        while(!finiIt(&tmp)) {
-            if (courantIt(&tmp) % p == 0)
-                effacer(&tmp);
-            else
-                suivantIt(&tmp);
-        }
-        suivantIt(&it);
-    }
-    return premiers;
-}
+//// QUESTION 2
+//Liste crible(int n) {
+//    
+//    Liste premiers;
+//    initListe(&premiers);
+//    
+//    for(int i = n; i > 1; --i)
+//        inclure(&premiers, i);
+//    
+//    Iterateur it;
+//    initIterateur(&premiers, &it);
+//    while(!finiIt(&it)) {
+//        int p = courantIt(&it);
+//        Iterateur tmp = it;
+//        suivantIt(&tmp);
+//        while(!finiIt(&tmp)) {
+//            if (courantIt(&tmp) % p == 0)
+//                effacer(&tmp);
+//            else
+//                suivantIt(&tmp);
+//        }
+//        suivantIt(&it);
+//    }
+//    return premiers;
+//}
 
 
 //QUESTION 3
@@ -200,15 +200,15 @@ Liste crible(int n) {
 
 
 // QUESTION 4
-int taille(const Liste* li){
-    return li->taille;
+int taillel(const Liste* li){
+    return li->taillel;
 }
 
 
 
 
 // QUESTION 5
-int inclureFin(Liste* li,ItemL it){
+int inclureFin(Liste* li,Item it){
     Maillon* m = (Maillon*)malloc(sizeof(Maillon));
     if(m==NULL)
         return 0;
@@ -220,7 +220,7 @@ int inclureFin(Liste* li,ItemL it){
         li->dernier->suivant = m; 
         li->dernier = m;
     }
-    ++li->taille;
+    ++li->taillel;
     return 1;
 }
 
@@ -243,7 +243,7 @@ unsigned int ronde(unsigned int n, unsigned int c, unsigned int e){
     }
     // éléction
     int tour = 1;
-    while(taille(&liste) > 1){
+    while(taillel(&liste) > 1){
         int player = premier(&liste);
         tronquer(&liste);
         if(tour % c != 0)
