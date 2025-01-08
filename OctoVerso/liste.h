@@ -8,6 +8,7 @@
 struct _Maillon_ {
     Item element;              ///< Valeur de l'élément.
     struct _Maillon_* suivant; ///< Adresse du maillon suivant (ou NULL).
+    struct _Maillon_* precedent;
 };
 
 // Facilité d'écriture.

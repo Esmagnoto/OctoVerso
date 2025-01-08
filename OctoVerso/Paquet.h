@@ -1,4 +1,3 @@
-
 #pragma once
 
 #include "vecteur.h"
@@ -15,7 +14,7 @@ void remplir(Paquet* p);
 
 void melanger(Paquet* p);
 
-Item piocher(Paquet* p);
+Item pioche(Paquet* p);
 
 void afficher(const Paquet* p);
 

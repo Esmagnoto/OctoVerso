@@ -1,7 +1,27 @@
 #pragma once
 #include "liste.h"
 
+#define NBCHMAX 8
+
 typedef struct {
-	Liste* rail;
+	Liste* chevalets;
+	int nbChevalets;
 } Rail;
+
+void initRail(Rail* r);
+
+void ajouter(Rail* r, Item* it);
+//gauche droite
+
+void enlever(Rail* r, Item* it);
+
+void palindrome(const Rail* r);
+
+void afficher(const Rail* r);
+
+//void estVide();
+
+//void estPlein();
+
+void detruireRail();
 

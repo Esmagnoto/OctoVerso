@@ -1,0 +1,6 @@
+﻿  main.c
+C:\Users\caio.esmagnoto\source\repos\OctoVerso\OctoVerso\main.c(12,16): warning C4013: 'piocher' non défini(e) ; extern retournant int pris par défaut
+  paquet.c
+C:\Users\caio.esmagnoto\source\repos\OctoVerso\OctoVerso\paquet.c(49,22): warning C4013: 'toupper' non défini(e) ; extern retournant int pris par défaut
+  Génération de code en cours...
+  OctoVerso.vcxproj -> C:\Users\caio.esmagnoto\Source\Repos\OctoVerso\x64\Debug\OctoVerso.exe

@@ -127,18 +127,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="File.h" />
-    <ClInclude Include="Chevalet.h" />
-    <ClInclude Include="Joueur.h" />
+    <ClInclude Include="dictionnaire.h" />
+    <ClInclude Include="item.h" />
+    <ClInclude Include="jeu.h" />
+    <ClInclude Include="joueur.h" />
     <ClInclude Include="liste.h" />
-    <ClInclude Include="Paquet.h" />
-    <ClInclude Include="Rail.h" />
+    <ClInclude Include="paquet.h" />
+    <ClInclude Include="rail.h" />
+    <ClInclude Include="vecteur.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="commandesgit.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="dictionnaire.c" />
+    <ClCompile Include="jeu.c" />
+    <ClCompile Include="joueur.c" />
     <ClCompile Include="liste.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="paquet.c" />
+    <ClCompile Include="rail.c" />
+    <ClCompile Include="vecteur.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="sujet-s1.02.pdf" />
