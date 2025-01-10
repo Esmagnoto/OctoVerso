@@ -65,6 +65,9 @@
     <ClCompile Include="dictionnaire.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="exemple(1).c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="sujet-s1.02.pdf">
@@ -73,6 +76,9 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="commandesgit.txt">
+      <Filter>Fichiers de ressources</Filter>
+    </Text>
+    <Text Include="ods4.txt">
       <Filter>Fichiers de ressources</Filter>
     </Text>
   </ItemGroup>

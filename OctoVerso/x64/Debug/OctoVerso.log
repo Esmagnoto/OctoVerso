@@ -1,6 +1,17 @@
-﻿  main.c
-C:\Users\caio.esmagnoto\source\repos\OctoVerso\OctoVerso\main.c(12,16): warning C4013: 'piocher' non défini(e) ; extern retournant int pris par défaut
+﻿  dictionnaire.c
+  exemple(1).c
+  jeu.c
+  joueur.c
+  liste.c
+  main.c
   paquet.c
-C:\Users\caio.esmagnoto\source\repos\OctoVerso\OctoVerso\paquet.c(49,22): warning C4013: 'toupper' non défini(e) ; extern retournant int pris par défaut
+C:\Users\vinic\source\repos\OctoVerso\OctoVerso\main.c(13,16): warning C4013: 'piocher' non défini(e) ; extern retournant int pris par défaut
+  rail.c
+C:\Users\vinic\source\repos\OctoVerso\OctoVerso\main.c(32,10): warning C4013: 'strlen' non défini(e) ; extern retournant int pris par défaut
+C:\Users\vinic\source\repos\OctoVerso\OctoVerso\main.c(36,27): warning C4013: 'strerror' non défini(e) ; extern retournant int pris par défaut
+C:\Users\vinic\source\repos\OctoVerso\OctoVerso\main.c(36,10): warning C4477: 'printf' : la chaîne de format '%s' nécessite un argument de type 'char *', mais l'argument variadique 1 est de type 'int'
+C:\Users\vinic\source\repos\OctoVerso\OctoVerso\main.c(36,10): warning C4313: 'printf' : '%s' dans la chaîne de format est en conflit avec l'argument 1 de type 'int'.
+C:\Users\vinic\source\repos\OctoVerso\OctoVerso\paquet.c(49,22): warning C4013: 'toupper' non défini(e) ; extern retournant int pris par défaut
+  vecteur.c
   Génération de code en cours...
-  OctoVerso.vcxproj -> C:\Users\caio.esmagnoto\Source\Repos\OctoVerso\x64\Debug\OctoVerso.exe
+  OctoVerso.vcxproj -> C:\Users\vinic\Source\Repos\OctoVerso\x64\Debug\OctoVerso.exe

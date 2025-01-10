@@ -2,6 +2,7 @@
 #include <assert.h>
 #include <stdlib.h>
 #include <stdio.h>
+#pragma warning (disable : 4996)
 
 int main() {
 	Paquet p;
@@ -13,5 +14,5 @@ int main() {
 	afficher(&p);
 	printf("%c", pioche);
 	detruirePaquet(&p);
-	return 0;
+	
 }

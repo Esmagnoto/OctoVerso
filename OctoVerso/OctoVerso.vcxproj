@@ -138,9 +138,11 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="commandesgit.txt" />
+    <Text Include="ods4.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dictionnaire.c" />
+    <ClCompile Include="exemple(1).c" />
     <ClCompile Include="jeu.c" />
     <ClCompile Include="joueur.c" />
     <ClCompile Include="liste.c" />
