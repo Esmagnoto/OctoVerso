@@ -1,15 +1,19 @@
 #pragma once 
 #include "item.h"
+#include "paquet.h"
+
+#define MAINJOUEUR 12
+
 
 typedef struct {
 	int nbOrdre;
-	Item* chevalets;
+	Paquet* chevalets;
 	int nbChevalets;
 } Joueur;
 
-void initjoueur(Joueur* j);
+void initjoueur(Joueur* j, int no);
 
-void piocher();
+void piocher(Joueur* j, Item* it);
 
 void faireCoup();
 

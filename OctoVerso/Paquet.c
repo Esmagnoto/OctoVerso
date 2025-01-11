@@ -3,15 +3,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void initPaquet(Paquet* p)
+void initPaquet(Paquet* p, int nbChevalets)
 {
     p->chevalets = (Vecteur*) malloc(sizeof(Vecteur));
     assert(p->chevalets != NULL);
-	initVecteur(p->chevalets, NBCHEVALETS);
+	initVecteur(p->chevalets, nbChevalets);
 }
 
 void remplir(Paquet* p) {
-    initPaquet(p);
+    initPaquet(p, NBCHEVALETS);
     const char lettre[] = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'l', 'm', 'n', 'o', 'p'
     , 'q', 'r', 's', 't', 'u', 'v' };
     const int quantite[] = { 9, 1, 2, 3, 14, 1, 1, 1, 7, 1, 5, 3, 6, 5, 2, 1, 6, 7, 6, 5, 2 };
@@ -34,7 +34,7 @@ void melanger(Paquet* p) {
     }
 }
 
-Item piocher(Paquet* p)
+Item pioche(Paquet* p)
 {
     assert(taille(p->chevalets) > 0);
     Item tmp = obtenir(p->chevalets, taille(p->chevalets)-1);

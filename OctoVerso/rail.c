@@ -11,12 +11,30 @@ void initRail(Rail* r)
 	initListe(r->chevalets);
 }
 
-void ajouter(Rail* r, Item* it)
+void ajouterR(Rail* r, Item* it)
 {
 	inclure(r->chevalets, it);
 }
 
+void ajouterI(Rail* r, Item* it)
+{
+	inclureFin(r->chevalets, it);
+}
+
 void enlever(Rail* r, Item* it)
 {
-
+	exclure(r->chevalets, it);
 }
+
+void palindrome(const Rail* r)
+{
+}
+
+void afficherR(const Rail* r)
+{
+}
+
+void detruireRail()
+{
+}
+

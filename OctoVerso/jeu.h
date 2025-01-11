@@ -3,13 +3,14 @@
 #include "rail.h"
 #include "joueur.h"
 
+
 typedef struct {
 	Paquet p;
 	Rail r;
 	Joueur j1, j2;
 }Jeu;
 
-void distibuer(Paquet* p);
+void distibuerChevalets(Jeu* j);
 
 void afficherMainJoueurs();
 
@@ -18,3 +19,5 @@ void etatJeu();
 void lireMot();
 
 void aideH();
+
+Paquet paquet(const Jeu* j);

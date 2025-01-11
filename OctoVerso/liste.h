@@ -19,8 +19,8 @@ typedef struct _Maillon_ Maillon;
  */
 typedef struct {
     Maillon* premier; ///< Adresse du premier maillon.
-    Maillon* dernier; // question 5
-    int taillel; ///< Nombre d'éléments contenus dans la liste. // QUESTION 4.
+    Maillon* dernier; 
+    int taillel; ///< Nombre d'éléments contenus dans la liste.
 } Liste;
 
 /**

@@ -6,8 +6,8 @@
 #include "liste.h"
 
 void initListe(Liste* li) {
-    li->premier = li->dernier = NULL; // <-- modification Question 5
-    li -> taillel = 0; // <-- ajout Question 4
+    li->premier = li->dernier = NULL;
+    li->taillel = 0;
 }
 
 int estVide(const Liste* li) {
