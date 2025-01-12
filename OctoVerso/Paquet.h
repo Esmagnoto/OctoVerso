@@ -7,19 +7,21 @@ typedef struct {
 } Paquet;
 
 /**
- * @brief Initialise un paquet comme étant une liste vide. 
- * Pour éviter toute fuite mémoire, tout paquet non vide doit être détruit 
+ * @brief Initialise un paquet comme étant une liste vide.
+ * Pour éviter toute fuite mémoire, tout paquet non vide doit être détruit
  * lorsqu'il ne sera plus utilisée (@ref detruiPaquet).
  * @param[out] p Adresse du paquet devant être initialisé.
+ * return 0 en cas d'échec (manque de mémoire disponible) et 1 en cas de succès.
  */
-void initPaquet(Paquet* p, int nbChevalets);
+int initPaquet(Paquet* p, int nbChevalets);
 
 /**
  * @brief Remplit un paquet (vide) avec tous les chevalets du jeu.
  * @param[in,out] p Adresse du paquet.
+ * return 0 en cas d'échec (manque de mémoire disponible) et 1 en cas de succès.
  * @sa initPaquet
  */
-void remplir(Paquet* p);
+int remplir(Paquet* p);
 
 /**
  * @brief Mélange les chevalets d'un paquet.

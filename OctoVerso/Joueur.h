@@ -20,4 +20,3 @@ void faireCoup();
 void nbChevalets();
 
 void signalerMot();
-

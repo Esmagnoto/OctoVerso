@@ -19,7 +19,7 @@ typedef struct _Maillon_ Maillon;
  */
 typedef struct {
     Maillon* premier; ///< Adresse du premier maillon.
-    Maillon* dernier; 
+    Maillon* dernier;
     int taillel; ///< Nombre d'éléments contenus dans la liste.
 } Liste;
 
@@ -163,11 +163,16 @@ int inserer(Iterateur* iter, Item it);
  */
 Item effacer(Iterateur* iter);
 
-
-//QUESTION 4
+/**
+ * @brief returne la taille d'une liste
+ * @param[in] li Adresse de la liste.
+ */
 int taillel(const Liste* li);
 
-
-
-// QUESTION 5
+/**
+ * @brief Insère un nouvel élément à la fin d'une liste.
+ * @param[in,out] li Adresse de la liste.
+ * @param[in] it élément devant être ajouté.
+ * @return 1 en cas de succès et 0 en cas de mémoire insuffisante. Dans ce dernier cas, la liste est inchangée.
+ */
 int inclureFin(Liste* li, Item it);

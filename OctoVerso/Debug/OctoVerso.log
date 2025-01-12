@@ -1,7 +1,4 @@
 ﻿  dictionnaire.c
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\yvals_core.h(23,1): error C1189: #error:  error STL1003: Unexpected compiler, expected C++ compiler.
-  (compiler le fichier source 'dictionnaire.c')
-  
-  paquet.c
   vecteur.c
   Génération de code en cours...
+  OctoVerso.vcxproj -> C:\Users\vinic\Source\Repos\OctoVerso\Debug\OctoVerso.exe

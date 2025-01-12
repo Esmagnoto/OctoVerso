@@ -7,25 +7,19 @@
 #include "Joueur.h"
 #pragma warning (disable : 4996)
 
-void distribuerChevalets(Joueur* j1, Joueur* j2, Paquet* p) {
-	for (int i = 0; i < MAINJOUEUR; i++)
-	{
-		piocher(&j1, pioche(&p));
-		piocher(&j2, pioche(&p));
-	}
-}
+
 int main() {
 	Paquet p;
-	Joueur j1;
-	Joueur j2;
-	Rail r;
 
-	initPaquet(&p, NBCHEVALETS);
-	remplir(&p);
+	assert(initPaquet(&p, NBCHEVALETS) == 1);
+	assert(remplir(&p) == 1);
 	melanger(&p);
+	printf("Le paquet est : \n");
 	afficher(&p);
-	distribuerChevalets(&j1, &j2, &p);
-
+	Item piocher = pioche(&p);
+	printf("Le chevalet pioche est : %c\n", toupper(piocher));
+	printf("Le paquet est : \n");
+	afficher(&p);
 	detruirePaquet(&p);
-	
+
 }
