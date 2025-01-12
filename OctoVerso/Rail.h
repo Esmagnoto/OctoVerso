@@ -5,7 +5,6 @@
 
 typedef struct {
 	Liste* chevalets;
-	int nbChevalets;
 } Rail;
 
 void initRail(Rail* r);

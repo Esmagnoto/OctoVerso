@@ -1,9 +1,10 @@
-#include "paquet.h"
-#include "joueur.h"
-#include "rail.h"
+
 #include <assert.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include "Paquet.h"
+#include "Rail.h"
+#include "Joueur.h"
 #pragma warning (disable : 4996)
 
 void distribuerChevalets(Joueur* j1, Joueur* j2, Paquet* p) {

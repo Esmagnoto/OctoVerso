@@ -129,7 +129,6 @@
   <ItemGroup>
     <ClInclude Include="dictionnaire.h" />
     <ClInclude Include="item.h" />
-    <ClInclude Include="jeu.h" />
     <ClInclude Include="joueur.h" />
     <ClInclude Include="liste.h" />
     <ClInclude Include="paquet.h" />
@@ -143,7 +142,6 @@
   <ItemGroup>
     <ClCompile Include="dictionnaire.c" />
     <ClCompile Include="exemple(1).c" />
-    <ClCompile Include="jeu.c" />
     <ClCompile Include="joueur.c" />
     <ClCompile Include="liste.c" />
     <ClCompile Include="main.c" />

@@ -1,6 +1,6 @@
-#pragma once 
+#pragma once
 #include "item.h"
-#include "paquet.h"
+#include "Paquet.h"
 
 #define MAINJOUEUR 12
 

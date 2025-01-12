@@ -46,7 +46,7 @@ Item pioche(Paquet* p)
 void afficher(const Paquet* p) {
     assert(taille(p->chevalets) > 0);
     for (int i = 0; i < taille(p->chevalets); i++) {
-        printf("%c", toupper(obtenir(p->chevalets, i)));
+        printf("%c", obtenir(p->chevalets, i));
     }
     printf("\n");
 }

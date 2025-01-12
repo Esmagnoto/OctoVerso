@@ -4,6 +4,7 @@
 
 
 
+
 typedef struct {
 	FILE* file;
 	char** mots;
